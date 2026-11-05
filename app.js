@@ -154,6 +154,7 @@
       entry.name, entry.en, entry.latin, entry.family, entry.genus, entry.distribution,
       entry.kind, entry._kind.label, entry._kind.en,
       ...(entry.aliases || []),
+      ...(entry.topics || []),
       ...(entry.habitatTypes || []),
       ...(entry.routeTags || []),
       ...(entry.colorTags || []),
@@ -1349,6 +1350,57 @@
     </svg>`;
   }
 
+  function ergotSVG(entry, options = {}) {
+    const art = entry.art || {};
+    const palette = art.palette || { cap: "#4B3A3A", gills: "#7B5A48", stem: "#B49B6A", accent: "#6C4A5A" };
+    const annotated = Boolean(options.annotated);
+    const aria = `${esc(entry.name)}形态示意：麦穗上的紫黑色角状菌核，非实拍，不能用于谷物或食品安全判断。`;
+    return `<svg class="botanical fungus-plate ergot-plate" viewBox="0 0 440 540" role="img" aria-label="${aria}" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <text x="26" y="31" fill="${INK}" opacity=".5" font-family="Menlo, monospace" font-size="7.2" letter-spacing=".1em">PLATE ${entry._no}</text>
+        <text x="414" y="31" fill="${INK}" opacity=".48" font-family="Menlo, monospace" font-size="7" letter-spacing=".13em" text-anchor="end">形态示意</text>
+        <g fill="none" stroke="${LINE}" stroke-width=".6" opacity=".7"><path d="M26 46h12M32 40v12"/><path d="M402 46h12M408 40v12"/><path d="M26 478h12M32 472v12"/><path d="M402 478h12M408 472v12"/></g>
+        <path d="M46 430 C120 422 180 431 244 427 C312 422 365 431 400 425" fill="none" stroke="${LINE}" stroke-width=".8" opacity=".65"/>
+        <g fill="none" stroke="${palette.stem}" stroke-width="1.2" stroke-linecap="round">
+          <path d="M147 410 C138 330 150 255 137 174"/>
+          <path d="M218 414 C213 336 225 260 215 159"/>
+          <path d="M294 412 C283 332 297 259 286 183"/>
+        </g>
+        <g fill="${palette.stem}" fill-opacity=".22" stroke="${INK}" stroke-width=".7">
+          <path d="M126 256 C111 246 108 232 120 220 C137 225 145 240 137 253Z"/>
+          <path d="M139 220 C153 207 168 209 176 220 C166 235 150 239 139 231Z"/>
+          <path d="M205 236 C190 226 188 211 201 199 C218 206 226 221 218 234Z"/>
+          <path d="M215 197 C231 185 246 190 251 202 C240 217 224 221 215 212Z"/>
+          <path d="M279 260 C264 248 263 233 276 221 C293 229 299 244 291 257Z"/>
+          <path d="M287 218 C302 205 318 209 323 222 C312 237 296 240 287 231Z"/>
+        </g>
+        <g>
+          <path d="M143 174 C129 164 128 147 141 138 C156 145 162 161 153 173Z" fill="${palette.cap}" fill-opacity=".8" stroke="${INK}" stroke-width="1"/>
+          <path d="M215 159 C201 149 200 132 213 123 C228 130 234 146 225 158Z" fill="${palette.cap}" fill-opacity=".8" stroke="${INK}" stroke-width="1"/>
+          <path d="M286 183 C272 173 271 156 284 147 C299 154 305 170 296 182Z" fill="${palette.cap}" fill-opacity=".8" stroke="${INK}" stroke-width="1"/>
+          <path d="M151 178 C148 192 150 204 153 214M224 162 C221 178 223 190 226 202M294 186 C291 200 293 213 296 225" fill="none" stroke="${palette.accent}" stroke-width=".9" opacity=".7"/>
+        </g>
+        <g fill="none" stroke="${INK}" stroke-width=".55" opacity=".4">
+          <path d="M112 174 C124 176 132 181 138 189"/><path d="M171 184 C161 188 153 195 148 204"/>
+          <path d="M191 293 C203 295 213 300 219 308"/><path d="M254 278 C244 283 237 291 233 300"/>
+        </g>
+        ${annotated ? `<g class="plate-annotations" fill="none" stroke="${INK}" stroke-width=".55" stroke-opacity=".48">
+          <path d="M330 128 C310 139 299 151 290 164"/><circle cx="330" cy="128" r="1.5" fill="${CINNABAR}" stroke="none"/>
+          <path d="M114 385 C132 379 145 374 158 370"/><circle cx="114" cy="385" r="1.5" fill="${CINNABAR}" stroke="none"/>
+        </g>
+        ${svgText("菌核 / SCLEROTIUM", 334, 124, { size: 7.2, tracking: ".03em", opacity: .7 })}
+        ${svgText("麦穗 / SPICA", 80, 381, { size: 7.2, tracking: ".03em", opacity: .7 })}` : ""}
+        <g transform="translate(26 517)">
+          <text x="0" y="4" fill="${INK}" opacity=".5" font-family="Menlo, monospace" font-size="6.8" letter-spacing=".08em">COLOR</text>
+          <rect x="37" y="-6" width="9" height="9" fill="${palette.cap}" stroke="${INK}" stroke-opacity=".35" stroke-width=".5"/><text x="50" y="3" fill="${INK}" opacity=".52" font-family="Menlo, monospace" font-size="6.6">核</text>
+          <rect x="68" y="-6" width="9" height="9" fill="${palette.gills}" stroke="${INK}" stroke-opacity=".35" stroke-width=".5"/><text x="81" y="3" fill="${INK}" opacity=".52" font-family="Menlo, monospace" font-size="6.6">穗</text>
+          <rect x="99" y="-6" width="9" height="9" fill="${palette.stem}" stroke="${INK}" stroke-opacity=".35" stroke-width=".5"/><text x="112" y="3" fill="${INK}" opacity=".52" font-family="Menlo, monospace" font-size="6.6">秆</text>
+        </g>
+        <text x="414" y="521" text-anchor="end" fill="${INK}" opacity=".36" font-family="Menlo, monospace" font-size="6.5" letter-spacing=".08em">POISON &amp; PATHOGEN ATLAS · ${entry._no}</text>
+      </g>
+    </svg>`;
+  }
+
   function fungusCapPath(cap) {
     if (cap === "bell") return "M-78 0 C-76 -74 -38 -116 0 -116 C38 -116 76 -74 78 0 C38 12 -38 12 -78 0Z";
     if (cap === "flat") return "M-100 0 C-80 -62 -36 -84 0 -84 C36 -84 80 -62 100 0 C52 14 -52 14 -100 0Z";
@@ -1562,7 +1614,23 @@
     let specimen = "";
     let labels = "";
 
-    if (form === "scorpion") {
+    if (form === "beetle") {
+      specimen = `<g>
+        <path d="M219 219 C219 196 230 181 247 181 C264 181 275 196 275 219 C275 238 263 249 247 249 C231 249 219 238 219 219Z" fill="${palette.body}" fill-opacity=".62" stroke="${INK}" stroke-width="1.1"/>
+        <path d="M205 251 C205 225 221 207 246 207 C272 207 288 225 288 251 L288 312 C288 352 271 382 246 390 C221 382 205 352 205 312Z" fill="${palette.body}" fill-opacity=".48" stroke="${INK}" stroke-width="1.2"/>
+        <path d="M246 209 L246 382" fill="none" stroke="${INK}" stroke-width=".85" opacity=".5"/>
+        <path d="M215 228 C222 217 232 211 246 211 M277 228 C270 217 260 211 246 211" fill="none" stroke="${palette.accent}" stroke-width=".8" opacity=".5"/>
+        <path d="M219 252 C201 241 189 224 179 203 M273 252 C291 241 303 224 313 203" fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round"/>
+        <g fill="none" stroke="${INK}" stroke-width="1.8" stroke-linecap="round" opacity=".8">
+          <path d="M213 278 C181 271 159 258 139 240"/><path d="M211 304 C176 301 147 299 119 299"/><path d="M213 329 C183 338 159 350 139 369"/>
+          <path d="M279 278 C311 271 333 258 353 240"/><path d="M281 304 C316 301 345 299 373 299"/><path d="M279 329 C309 338 333 350 353 369"/>
+        </g>
+        <path d="M246 207 C246 190 253 178 266 172 M246 207 C246 190 239 178 226 172" fill="none" stroke="${INK}" stroke-width="1" stroke-linecap="round"/>
+        <path d="M246 391 C236 404 226 415 216 426 M246 391 C256 404 266 415 276 426" fill="none" stroke="${INK}" stroke-width=".9" opacity=".6"/>
+        <g fill="${palette.accent}" opacity=".55"><circle cx="225" cy="248" r="2.2"/><circle cx="268" cy="274" r="1.6"/><circle cx="230" cy="337" r="2"/><circle cx="262" cy="351" r="1.4"/></g>
+      </g>`;
+      labels = annotated ? `${svgText("鞘翅 / ELYTRA", 300, 356, { size: 7.2, tracking: ".03em", opacity: .65 })}` : "";
+    } else if (form === "scorpion") {
       specimen = `<g>
         <path d="M185 301 C185 271 204 252 232 252 C261 252 281 271 281 301 C281 330 260 348 232 348 C204 348 185 330 185 301Z" fill="${palette.body}" fill-opacity=".56" stroke="${INK}" stroke-width="1.2"/>
         <path d="M207 263 C202 245 210 229 224 219 C233 232 232 249 225 263Z" fill="${palette.body}" fill-opacity=".4" stroke="${INK}" stroke-width=".8"/>
@@ -1621,7 +1689,7 @@
       labels = annotated ? `${svgText("沙漏斑 / HOURGLASS", 318, 324, { size: 7.2, tracking: ".03em", opacity: .65 })}` : "";
     }
 
-    const aria = `${esc(entry.name)}形态示意：${form === "scorpion" ? "蝎的螯肢、体节与尾针" : form === "funnelweb" ? "漏斗网蛛的体形、螯肢与漏斗状网" : "蜘蛛的体形、八足与腹部斑纹"}。程序生成，非实拍。`;
+    const aria = `${esc(entry.name)}形态示意：${form === "scorpion" ? "蝎的螯肢、体节与尾针" : form === "funnelweb" ? "漏斗网蛛的体形、螯肢与漏斗状网" : form === "beetle" ? "甲虫的鞘翅、触角与六足" : "蜘蛛的体形、八足与腹部斑纹"}。程序生成，非实拍。`;
     return `<svg class="botanical arthropod-plate" viewBox="0 0 440 540" role="img" aria-label="${aria}" xmlns="http://www.w3.org/2000/svg">
       <g>
         <text x="26" y="31" fill="${INK}" opacity=".5" font-family="Menlo, monospace" font-size="7.2" letter-spacing=".1em">PLATE ${entry._no}</text>
@@ -1643,7 +1711,7 @@
   function entryArtSVG(entry, options = {}) {
     if (entry.kind === "plant") return botanicalSVG(entry, options);
     if (entry.kind === "snake") return snakeSVG(entry, options);
-    if (entry.kind === "fungus") return fungusSVG(entry, options);
+    if (entry.kind === "fungus") return entry.art && entry.art.form === "ergot" ? ergotSVG(entry, options) : fungusSVG(entry, options);
     if (entry.kind === "marine") return marineSVG(entry, options);
     if (entry.kind === "arthropod") return arthropodSVG(entry, options);
     return pathogenSVG(entry, options);
