@@ -1,11 +1,11 @@
 /* 毒物谱 · 植物数据（第一批）
  * 全部条目仅用于创作与形态参考，不构成医疗建议。
  * 毒性、发作时间与分布均为概括性资料，个体差异极大。
- * 版本：5.0 · 75 条毒物（植物 33 / 蛇类 12 / 真菌 7 / 海洋 6 / 节肢 5 / 病原 12）
+ * 版本：7.0 · 100 条毒物（植物 38 / 蛇类 17 / 真菌 12 / 海洋 11 / 节肢 10 / 病原 12）
  */
 
 window.POISON_META = {
-  version: "5.0",
+  version: "7.0",
   updated: "2026-11",
   siteName: "毒物谱",
   siteEn: "Poisons & Pathogens",
@@ -1798,5 +1798,267 @@ window.POISON_PLANTS = [
     misuse: "把苦艾酒当春药或致幻剂大量饮用；内服苦艾精油；用苦艾替换普通香草；给不知情者加料。",
     trivia: "苦艾的苦味来自苦艾素等成分；它和茴香、茴芹一起构成传统苦艾酒的风味基底。",
     silhouette: { leaf: "compound", flower: "panicle", fruit: "capsule" }
+  },
+  {
+    id: "papaver-somniferum",
+    kind: "plant",
+    name: "鸦片罂粟",
+    en: "Opium Poppy",
+    latin: "Papaver somniferum",
+    family: "罂粟科 Papaveraceae",
+    genus: "罂粟属 Papaver",
+    aliases: ["罂粟", "Opium poppy", "Poppy"],
+    topics: ["催情传说", "春药", "鸦片"],
+    toxicity: {
+      level: 5,
+      parts: "未成熟蒴果的乳汁（鸦片）及全株生物碱",
+      symptoms: ["昏迷", "呼吸困难", "恶心呕吐", "抽搐", "心悸"],
+      onset: "吸食或食入后数十分钟–数小时；呼吸抑制可逐渐加重（参考）",
+      lethal: "是（呼吸抑制、误吸与过量风险高；依赖性也强）",
+      note: "鸦片与吗啡类会抑制呼吸、引起嗜睡与依赖，性欲和性功能的影响并不稳定。它不是春药；用药物制造亲密不是同意，任何秘密给药都是性暴力。"
+    },
+    medicinal: {
+      used: true,
+      parts: "未成熟蒴果的乳汁（鸦片）；现代医疗使用其纯化生物碱",
+      uses: "吗啡等生物碱是强效镇痛药，必须在医疗监管下使用；本页不提供剂量、制备或使用方式。",
+      contraindications: "呼吸功能不全、儿童、孕妇与成瘾风险人群尤其危险；禁止自行种植、采制或服用。"
+    },
+    habitat: "温带农田、园圃与受扰动土壤；在许多地区种植受严格管制。",
+    habitatTypes: ["栽培", "旷野"],
+    routeTags: ["食入", "吸入烟雾"],
+    distribution: "原产地中海至西亚；全球温带地区有栽培，种植与流通受法律管制。",
+    height: "0.5–1.5 米",
+    bloom: "4–6 月",
+    morphology: {
+      leaf: "叶片羽状深裂，灰绿色，抱茎。",
+      flower: "花大，杯状，白、粉、红或紫色，花瓣薄。",
+      fruit: "蒴果，圆球形至椭圆形，顶部有放射状柱头盘；未成熟时含乳汁。",
+      flowerColor: "白、粉、红或紫",
+      leafColor: "灰绿",
+      stemColor: "灰绿至粉绿"
+    },
+    colorTags: ["白", "粉", "红", "紫"],
+    palette: { flower: "#C7A1A0", leaf: "#71806A", stem: "#8A8C70", accent: "#8A4A4E", fruit: "#9C956D" },
+    smell: "花有淡香；未成熟蒴果切开后乳汁有苦味与特殊气味。",
+    lookalikes: [
+      { name: "虞美人 Papaver rhoeas", diff: "虞美人是常见观赏罂粟，茎叶有毛、花较小；鸦片罂粟茎叶较光滑、蒴果大，乳汁含吗啡类生物碱。" },
+      { name: "冰岛罂粟 Papaver nudicaule", diff: "冰岛罂粟为观赏植物，花多为黄、橙或白；不能以“罂粟花”一概而论，也不要自行采制任何罂粟乳汁。" }
+    ],
+    protection: "不要自行种植、割果或收集乳汁；观赏时也不要让孩子接触蒴果；发现非法种植应向当地主管部门报告。",
+    firstAid: "立即联系急救或毒物中心，说明可能摄入的鸦片/罂粟制品。不要自行催吐或使用兴奋剂“唤醒”；呼吸变慢或意识下降时立即呼叫急救。",
+    legend: "鸦片在 19 世纪成为全球贸易与殖民战争的核心商品，也被文学写成“忘忧”与“堕落”的双面象征。它的真实药理是强效镇痛与呼吸抑制，不是浪漫的春药。",
+    creative: "适合写烟馆、殖民地港口或贵族密室：空气里是甜而闷的烟味，角色把鸦片当成“让人卸下防备”的工具。把场景写成成瘾、权力与呼吸抑制，而不是被美化的情欲。",
+    misuse: "把罂粟壳当火锅香料；把鸦片或罂粟制品当春药；给不知情的人加料；用“提神”对抗过量后的嗜睡。",
+    trivia: "罂粟籽本身可作食品，但未经处理的罂粟秸秆、蒴果与乳汁含吗啡类生物碱；三者不能混为一谈。",
+    silhouette: { leaf: "lobed", flower: "cup", fruit: "capsule" }
+  },
+  {
+    id: "cannabis-sativa",
+    kind: "plant",
+    name: "大麻",
+    en: "Cannabis",
+    latin: "Cannabis sativa",
+    family: "大麻科 Cannabaceae",
+    genus: "大麻属 Cannabis",
+    aliases: ["火麻", "Cannabis", "Hemp"],
+    topics: ["催情传说", "性幻觉", "春药"],
+    toxicity: {
+      level: 3,
+      parts: "雌株花序与树脂；不同品种的 THC/CBD 比例差异很大",
+      symptoms: ["幻觉", "心悸", "恶心呕吐", "抽搐", "昏迷"],
+      onset: "吸入后数分钟–1 小时；食入后 30 分钟–2 小时（参考）",
+      lethal: "否（通常不致死；高剂量、合成大麻素与心血管事件仍有风险）",
+      note: "大麻可改变时间感、知觉与性体验，但效果高度个体化，也可能诱发焦虑、妄想与心悸。它不是可靠的春药，许多地区对其使用有法律限制。"
+    },
+    medicinal: {
+      used: true,
+      parts: "花序、树脂及特定提取物",
+      uses: "部分大麻素在严格医疗监管下用于特定适应症；本页不提供品种、剂量、制备或使用方式。",
+      contraindications: "青少年、孕期、精神病史、心血管疾病与驾驶/操作机械前尤其应避免；不要与酒精或其他精神活性物质混用。"
+    },
+    habitat: "温带至热带栽培地、路边与受扰动土壤；许多地区种植受管制。",
+    habitatTypes: ["栽培", "旷野"],
+    routeTags: ["吸入烟雾", "食入"],
+    distribution: "原产中亚至南亚；全球广泛栽培，法律地位因地区而异。",
+    height: "0.5–3 米",
+    bloom: "花期随品种与光周期变化",
+    morphology: {
+      leaf: "掌状复叶，小叶披针形、边缘有锯齿。",
+      flower: "雌雄异株；雌花序短穗状，密生苞片与树脂腺。",
+      fruit: "瘦果（大麻籽），小型，灰褐至棕色。",
+      flowerColor: "绿色至黄绿",
+      leafColor: "绿色",
+      stemColor: "绿色至紫褐"
+    },
+    colorTags: ["绿", "黄"],
+    palette: { flower: "#879B64", leaf: "#4E6C46", stem: "#756B4E", accent: "#8A5A45", fruit: "#8A7B55" },
+    smell: "植株有强烈树脂气味；不同品种从柑橘到土腥不等。",
+    lookalikes: [
+      { name: "紫苏 Perilla frutescens", diff: "紫苏叶对生、卵形、有香气，茎方形；大麻叶为掌状复叶、小叶披针形，形态不同。" },
+      { name: "葎草 Humulus scandens", diff: "葎草是同科攀援杂草，叶掌状裂但茎有倒刺；不能以“掌状叶”判断大麻或可食。" }
+    ],
+    protection: "不要在驾驶、操作机械或精神状态不稳定时使用；不要给未成年人和不知情者；注意当地法律与工作场所规定。",
+    firstAid: "如出现严重焦虑、幻觉、胸痛、晕厥或持续呕吐，立即联系急救。不要自行催吐或混合酒精/兴奋剂；保留产品包装供医生判断。",
+    legend: "大麻在 20 世纪成为反文化运动的象征，也被一些文本写成“让人放松、放大感官”的春药。真实效果取决于剂量、品种、情境与个体，焦虑、妄想和心悸同样常见。",
+    creative: "适合写一间深夜公寓：角色以为大麻会让两个人更靠近，结果时间感被拉长、心跳变得吵闹，其中一个开始偏执。把“催情”写成期待与现实的错位，而不是必然的欲望。",
+    misuse: "把大麻当无害春药；与酒精、兴奋剂或处方药叠加；给不知情者食用含大麻的食品；在驾驶或工作时使用。",
+    trivia: "大麻的纤维用途（火麻）与精神活性用途来自同属不同品种/化学型；THC 与 CBD 的作用并不相同。",
+    silhouette: { leaf: "palmate", flower: "spike", fruit: "capsule" }
+  },
+  {
+    id: "physostigma-venenosum",
+    kind: "plant",
+    name: "毒扁豆",
+    en: "Calabar Bean",
+    latin: "Physostigma venenosum",
+    family: "豆科 Fabaceae",
+    genus: "毒扁豆属 Physostigma",
+    aliases: ["卡拉巴豆", "Calabar bean", "Ordeal bean"],
+    toxicity: {
+      level: 5,
+      parts: "种子（毒扁豆）含毒扁豆碱等胆碱酯酶抑制剂",
+      symptoms: ["恶心呕吐", "肌肉无力", "呼吸困难", "抽搐", "昏迷", "心悸"],
+      onset: "食入后约 30 分钟–2 小时；分泌物增多、瞳孔缩小与肌无力可较早出现（参考）",
+      lethal: "是（可因呼吸肌麻痹与中枢抑制死亡）",
+      note: "毒扁豆碱是胆碱酯酶抑制剂，作用与阿托品相反。它曾被用于西非神判；不要用任何“解毒”偏方，必须立即就医。"
+    },
+    medicinal: {
+      used: true,
+      parts: "种子（毒扁豆碱来源）",
+      uses: "毒扁豆碱在医疗上用于特定抗胆碱能中毒等情况，必须在医生指导下使用；本页不提供剂量或制剂。",
+      contraindications: "哮喘、心血管疾病、肠梗阻与孕妇尤其危险；禁止自行食用种子或使用提取物。"
+    },
+    habitat: "西非热带雨林、溪边与湿地；攀援于树木。",
+    habitatTypes: ["林地", "热带", "水岸"],
+    routeTags: ["食入"],
+    distribution: "西非，尤其尼日利亚、喀麦隆与加纳；其他地区有引种记录。",
+    height: "攀援藤本，可达数米",
+    bloom: "热带花期不固定",
+    morphology: {
+      leaf: "三出复叶，小叶卵形至椭圆形。",
+      flower: "蝶形花，淡紫至粉紫色，成总状花序。",
+      fruit: "荚果，木质，内含 2–3 枚褐色种子。",
+      flowerColor: "淡紫至粉紫",
+      leafColor: "深绿",
+      stemColor: "褐绿"
+    },
+    colorTags: ["紫", "绿", "褐"],
+    palette: { flower: "#A58AA6", leaf: "#3F5F45", stem: "#77664F", accent: "#8A4A45", fruit: "#8A6B4D" },
+    smell: "种子有豆腥与苦味；植株本身无强烈气味。",
+    lookalikes: [
+      { name: "红豆 Vigna angularis", diff: "红豆种子暗红、有白色种脐，是常见豆类；毒扁豆种子较大、褐色，含胆碱酯酶抑制剂，不能煮食。" },
+      { name: "其他豆科藤本", diff: "豆科荚果与蝶形花相似；不要用“像豆角”判断可食。" }
+    ],
+    protection: "不要把毒扁豆种子当豆类；不要让儿童接触手串或种子；在医疗场景外不要使用毒扁豆碱。",
+    firstAid: "立即联系急救或毒物中心。保留种子或植物样本；不要自行催吐、喂食或使用阿托品等药物。",
+    legend: "毒扁豆在西非曾用于“神判”：被控者吞下豆子，出现中毒症状就被判有罪。这个制度把药理反应误当成神意，也让一种强效胆碱酯酶抑制剂进入了医学史。",
+    creative: "适合写殖民法庭或部落审判：一碗豆子被当作真相的试纸。角色吞下后大量流涎、呕吐、肌肉无力，旁观者却把这当成“有罪”的证据。把悲剧写成制度与毒理共同作用。",
+    misuse: "把毒扁豆当普通豆类；用“神判”或“测谎”方式给人服用；用阿托品自行对抗；给儿童接触种子。",
+    trivia: "毒扁豆碱与阿托品作用于同一套胆碱能系统，但方向相反；这也是它们常被并列讨论的原因。",
+    silhouette: { leaf: "compound", flower: "pea", fruit: "pod" }
+  },
+  {
+    id: "rhododendron-molle",
+    kind: "plant",
+    name: "闹羊花",
+    en: "Chinese Azalea",
+    latin: "Rhododendron molle",
+    family: "杜鹃花科 Ericaceae",
+    genus: "杜鹃花属 Rhododendron",
+    aliases: ["羊踯躅", "黄杜鹃", "Chinese azalea"],
+    toxicity: {
+      level: 4,
+      parts: "花、叶与花蜜；含木藜芦毒素（grayanotoxin）",
+      symptoms: ["恶心呕吐", "心悸", "抽搐", "昏迷", "呼吸困难"],
+      onset: "食入后约 30 分钟–2 小时；流涎、麻木、低血压与心律异常可出现（参考）",
+      lethal: "可能（严重心律失常、低血压与呼吸抑制可致死）",
+      note: "“闹羊花”之名来自羊误食后步态不稳。花蜜也可能含毒素，不要采食野生杜鹃花蜜。"
+    },
+    medicinal: {
+      used: true,
+      parts: "花与根（传统药用部位）",
+      uses: "传统用于祛风除湿、止痛等；现代使用须严格专业处理，本页不提供剂量或用法。",
+      contraindications: "心血管疾病、孕妇与儿童尤其危险；禁止自行泡酒、煎服或外敷。"
+    },
+    habitat: "中国南方山地灌丛、林缘与酸性土壤。",
+    habitatTypes: ["山地", "林地", "旷野"],
+    routeTags: ["食入", "皮肤接触"],
+    distribution: "中国长江流域以南至华南、西南山地；园艺引种。",
+    height: "0.5–2 米",
+    bloom: "3–5 月",
+    morphology: {
+      leaf: "卵形至椭圆形，全缘，叶面有短柔毛。",
+      flower: "漏斗状，金黄色至橙黄，成伞形花序。",
+      fruit: "蒴果，圆柱形，成熟时褐色。",
+      flowerColor: "金黄至橙黄",
+      leafColor: "绿色",
+      stemColor: "灰褐"
+    },
+    colorTags: ["黄", "绿"],
+    palette: { flower: "#C8A64E", leaf: "#516B49", stem: "#7A664F", accent: "#9A5A45", fruit: "#8A7050" },
+    smell: "花有甜香；叶揉碎有青味与轻微药味。",
+    lookalikes: [
+      { name: "杜鹃花 Rhododendron simsii", diff: "常见观赏杜鹃花色丰富、花形相近；野生杜鹃属多种都有毒，不要采食花蜜或花瓣。" },
+      { name: "金银花 Lonicera japonica", diff: "金银花为忍冬科藤本、花成对、白转黄；闹羊花为杜鹃花科灌木、花漏斗状金黄色。" }
+    ],
+    protection: "不要采食野生杜鹃花、花蜜或泡酒；园艺修剪戴手套；儿童与宠物远离花枝。",
+    firstAid: "立即联系急救或毒物中心。保留花、叶或蜜源照片；不要自行催吐、喂食或使用偏方。",
+    legend: "“羊踯躅”这个名字来自羊误食后徘徊不前的样子。它既是山野常见的黄色杜鹃，也是旧时“蒙汗药”传说里可能被借用的花。",
+    creative: "适合写山间客栈：后院的黄杜鹃开得正好，老板用花泡酒招待客人。角色先觉得口唇发麻、心跳变慢，随后晕倒。不要把它写成浪漫的迷情酒，而是地方经验与毒性知识的冲突。",
+    misuse: "用闹羊花泡酒或入菜；把黄色杜鹃当可食花；给儿童吸花蜜；与金银花混采。",
+    trivia: "杜鹃花属许多种类的花蜜含木藜芦毒素；蜂蜜也可能受影响，不要采食来源不明的野生花蜜。",
+    silhouette: { leaf: "ovate", flower: "funnel", fruit: "capsule" }
+  },
+  {
+    id: "strophanthus-kombe",
+    kind: "plant",
+    name: "毒毛旋花",
+    en: "Kombe Strophanthus",
+    latin: "Strophanthus kombe",
+    family: "夹竹桃科 Apocynaceae",
+    genus: "羊角拗属 Strophanthus",
+    aliases: ["毒毛旋花子", "Kombe", "Strophanthus"],
+    toxicity: {
+      level: 5,
+      parts: "种子含强心苷（毒毛旋花子苷等）",
+      symptoms: ["恶心呕吐", "心悸", "呼吸困难", "昏迷", "抽搐"],
+      onset: "食入后约 30 分钟–2 小时；心律失常与胃肠症状可较早出现（参考）",
+      lethal: "是（强心苷可致严重心律失常与心脏停搏）",
+      note: "毒毛旋花是箭毒与强心苷的重要来源；治疗窗极窄。它不提供任何“强身”或催情效果，自行使用极其危险。"
+    },
+    medicinal: {
+      used: true,
+      parts: "种子（强心苷来源）",
+      uses: "其强心苷曾用于心力衰竭研究；现代使用必须在医疗监护下进行，本页不提供剂量或制剂。",
+      contraindications: "心脏病、电解质紊乱、孕妇与儿童尤其危险；禁止自行泡酒、煎服或外敷。"
+    },
+    habitat: "非洲热带稀树草原、河岸灌丛与林地。",
+    habitatTypes: ["旷野", "林地", "水岸", "热带"],
+    routeTags: ["食入"],
+    distribution: "东非与南部非洲；其他热带地区有栽培。",
+    height: "攀援灌木，可达数米",
+    bloom: "热带花期不固定",
+    morphology: {
+      leaf: "卵形至披针形，对生，革质。",
+      flower: "漏斗状，黄白至淡黄，花瓣末端延长成丝状。",
+      fruit: "蓇葖果，长角状，内含带毛种子。",
+      flowerColor: "黄白至淡黄",
+      leafColor: "深绿",
+      stemColor: "灰褐"
+    },
+    colorTags: ["黄", "绿"],
+    palette: { flower: "#D7C887", leaf: "#3F5A43", stem: "#766049", accent: "#9A6245", fruit: "#8B744D" },
+    smell: "花有淡香；种子破碎后有苦味。",
+    lookalikes: [
+      { name: "金银花 Lonicera japonica", diff: "金银花为忍冬科藤本、花成对、白转黄，无强心苷；毒毛旋花为夹竹桃科，种子含强心苷。" },
+      { name: "夹竹桃 Nerium oleander", diff: "夹竹桃也是强心苷植物，叶狭长、花漏斗状；两者都不能自行使用，且中毒表现相似。" }
+    ],
+    protection: "不要采食种子或泡酒；不要用“强心”草药自行治疗；园艺操作戴手套，儿童与宠物远离。",
+    firstAid: "立即联系急救或毒物中心。保留种子、植物照片或制品；不要自行催吐、喂食或使用其他心脏药物。",
+    legend: "毒毛旋花的种子曾被制成箭毒，也被欧洲医学用作强心苷来源。它的“强心”不是保健，而是把心脏推向致命心律失常的边缘。",
+    creative: "适合写殖民地植物园或传教士药房：一瓶从非洲寄来的种子被标成“强心药”。角色误服后先呕吐，再出现心跳紊乱；真正的悬念是药与毒的界线有多窄。",
+    misuse: "把毒毛旋花种子当强心保健品；泡酒或煎服；用“箭毒”制造戏剧性暗杀；与夹竹桃混用。",
+    trivia: "毒毛旋花属的种子常带长毛，靠风传播；强心苷在种子中浓度较高。",
+    silhouette: { leaf: "lanceolate", flower: "funnel", fruit: "follicle" }
   }
 ];

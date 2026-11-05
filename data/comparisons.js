@@ -31,6 +31,9 @@ window.POISON_COMPARE_REFERENCES = [
   ,{ id: "cinnamon", name: "肉桂", en: "Cinnamon", latin: "Cinnamomum verum", family: "樟科 Lauraceae", status: "常见香料", summary: "常见香料，使用树皮卷成桂皮筒，甜辛香明显；与肉豆蔻的种子、育亨宾的苦味树皮不同。" }
   ,{ id: "mugwort", name: "艾草", en: "Mugwort", latin: "Artemisia vulgaris", family: "菊科 Asteraceae", status: "可食 / 常见", summary: "常见蒿属植物，叶形与苦艾相近，但苦艾叶更银灰、味更苦，精油风险更高；不要用外形判断采食。" }
 
+  ,{ id: "corn-poppy", name: "虞美人", en: "Corn Poppy", latin: "Papaver rhoeas", family: "罂粟科 Papaveraceae", status: "常见观赏", summary: "常见观赏罂粟，茎叶有毛、花较小；与鸦片罂粟的蒴果、乳汁和生物碱不同。" }
+  ,{ id: "azalea", name: "杜鹃花", en: "Azalea", latin: "Rhododendron simsii", family: "杜鹃花科 Ericaceae", status: "常见观赏", summary: "常见观赏杜鹃，花色丰富；杜鹃花属多种含木藜芦毒素，不要采食花蜜或花瓣。" }
+
 ];
 
 window.POISON_PLANT_COMPARISONS = {
@@ -67,5 +70,11 @@ window.POISON_PLANT_COMPARISONS = {
   ,"myristica-fragrans": { targetId: "cinnamon", diff: "肉豆蔻是圆形种子、表面有网状纹理，肉桂是卷曲树皮、甜辛香；两者都是香料，但部位和毒性不同。" }
   ,"pausinystalia-johimbe": { targetId: "cinnamon", diff: "育亨宾是茜草科苦味树皮，肉桂是樟科甜辛香树皮；育亨宾含育亨宾生物碱，不能当香料使用。" }
   ,"artemisia-absinthium": { targetId: "mugwort", diff: "苦艾叶更银灰、味更苦，艾草是常见食用/药用蒿属；苦艾精油不可内服，不能与艾草混用。" }
+
+  ,"papaver-somniferum": { targetId: "corn-poppy", diff: "鸦片罂粟蒴果大、茎叶较光滑，虞美人茎叶有毛、花较小；鸦片罂粟的乳汁含吗啡类生物碱，不能以“罂粟花”观赏或采制。" }
+  ,"cannabis-sativa": { targetId: "perilla", diff: "大麻为掌状复叶、小叶披针形；紫苏叶对生、卵形、有香气。两者外形不同，且大麻的使用受法律管制。" }
+  ,"physostigma-venenosum": { targetId: "adzuki", diff: "毒扁豆种子较大、褐色，含胆碱酯酶抑制剂；红豆暗红、有白色种脐，是常见豆类。不能把毒扁豆当豆类煮食。" }
+  ,"rhododendron-molle": { targetId: "azalea", diff: "闹羊花为黄色漏斗状花，杜鹃花常为红/粉/白；两者都属杜鹃花属，花蜜与花瓣都可能含木藜芦毒素。" }
+  ,"strophanthus-kombe": { targetId: "honeysuckle", diff: "毒毛旋花为夹竹桃科藤本、种子含强心苷；金银花为忍冬科、花成对、白转黄。不能把毒毛旋花当金银花。" }
 
 };
