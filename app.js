@@ -1674,6 +1674,7 @@
       </g>`;
       labels = annotated ? `${svgText("螯肢 / CHELICERAE", 330, 326, { size: 7.2, tracking: ".03em", opacity: .65 })}` : "";
     } else {
+      const mark = art.mark || "hourglass";
       specimen = `<g>
         <path d="M195 279 C195 249 217 230 247 230 C279 230 301 250 301 280 C301 313 278 332 247 332 C216 332 195 312 195 279Z" fill="${palette.body}" fill-opacity=".58" stroke="${INK}" stroke-width="1.1"/>
         <path d="M225 236 C225 209 239 195 257 195 C277 195 291 211 291 237" fill="none" stroke="${INK}" stroke-width="1.05" opacity=".5"/>
@@ -1683,10 +1684,11 @@
         </g>
         <path d="M231 287 C225 301 226 315 235 326 M263 287 C269 301 268 315 259 326" fill="none" stroke="${INK}" stroke-width="2.1" stroke-linecap="round"/>
         <circle cx="237" cy="255" r="3.2" fill="${PAPER}"/><circle cx="258" cy="255" r="3.2" fill="${PAPER}"/><circle cx="247" cy="250" r="2.2" fill="${PAPER}"/>
-        <path d="M235 300 L247 289 L259 300 L247 314Z" fill="${palette.accent}" opacity=".75"/>
+        ${mark === "fiddle" ? `<path d="M232 302 C238 289 254 289 260 302 C254 314 238 314 232 302Z" fill="none" stroke="${palette.accent}" stroke-width="1.2" opacity=".8"/><path d="M244 291 C247 300 247 305 246 311 M238 298 C241 301 249 301 254 298" fill="none" stroke="${palette.accent}" stroke-width=".8" opacity=".7"/>` : mark === "none" ? "" : `<path d="M235 300 L247 289 L259 300 L247 314Z" fill="${palette.accent}" opacity=".75"/>`}
         <g fill="${palette.accent}" opacity=".5"><circle cx="222" cy="270" r="2"/><circle cx="271" cy="270" r="2"/><circle cx="247" cy="318" r="1.8"/></g>
       </g>`;
-      labels = annotated ? `${svgText("沙漏斑 / HOURGLASS", 318, 324, { size: 7.2, tracking: ".03em", opacity: .65 })}` : "";
+      const markLabel = mark === "fiddle" ? "提琴斑 / FIDDLE" : mark === "none" ? "眼列 / OCELLI" : "沙漏斑 / HOURGLASS";
+      labels = annotated ? `${svgText(markLabel, 318, 324, { size: 7.2, tracking: ".03em", opacity: .65 })}` : "";
     }
 
     const aria = `${esc(entry.name)}形态示意：${form === "scorpion" ? "蝎的螯肢、体节与尾针" : form === "funnelweb" ? "漏斗网蛛的体形、螯肢与漏斗状网" : form === "beetle" ? "甲虫的鞘翅、触角与六足" : "蜘蛛的体形、八足与腹部斑纹"}。程序生成，非实拍。`;

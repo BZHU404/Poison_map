@@ -3591,3 +3591,18 @@ svg { max-width: 100%; }
   .compare-dialog-inner { padding: 16px 14px 18px; }
   .compare-label { font-size: 7px; }
 }
+
+@media (max-width: 420px) {
+  .pagination {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .pagination-pages {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .pagination-pages .page-button {
+    min-width: 27px;
+  }
+}
