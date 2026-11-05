@@ -28,6 +28,9 @@ window.POISON_COMPARE_REFERENCES = [
   { id: "dandelion", name: "蒲公英", en: "Dandelion", latin: "Taraxacum mongolicum", family: "菊科 Asteraceae", status: "可食 / 常见", summary: "常见野草，基生叶莲座状、黄色头状花序；与乌头的盔状花、块根和乌头碱毒性不同。" },
   { id: "nutmeg", name: "肉豆蔻", en: "Nutmeg", latin: "Myristica fragrans", family: "肉豆蔻科 Myristicaceae", status: "常见香料", summary: "常见香料种子，表面有网状纹理，气味浓；与马钱子的纽扣状种子和士的宁毒性不同。" },
   { id: "rapeseed", name: "油菜", en: "Rapeseed", latin: "Brassica napus", family: "十字花科 Brassicaceae", status: "可食 / 常见", summary: "常见油料与蔬菜作物，花黄色、四瓣，果实为角果；与博落回的黄绿色花、毒性不同。" }
+  ,{ id: "cinnamon", name: "肉桂", en: "Cinnamon", latin: "Cinnamomum verum", family: "樟科 Lauraceae", status: "常见香料", summary: "常见香料，使用树皮卷成桂皮筒，甜辛香明显；与肉豆蔻的种子、育亨宾的苦味树皮不同。" }
+  ,{ id: "mugwort", name: "艾草", en: "Mugwort", latin: "Artemisia vulgaris", family: "菊科 Asteraceae", status: "可食 / 常见", summary: "常见蒿属植物，叶形与苦艾相近，但苦艾叶更银灰、味更苦，精油风险更高；不要用外形判断采食。" }
+
 ];
 
 window.POISON_PLANT_COMPARISONS = {
@@ -60,4 +63,9 @@ window.POISON_PLANT_COMPARISONS = {
   "urtica-dioica": { targetId: "perilla", diff: "荨麻叶有蜇毛、粗糙，紫苏叶对生、有香气、无蜇毛；不要徒手采。" },
   "pinellia-ternata": { targetId: "taro", diff: "半夏三小叶、植株小，芋头叶盾形、块茎可食；生半夏刺激性强，不能混采。" },
   "arisaema-erubescens": { targetId: "konjac", diff: "天南星掌状叶、佛焰苞更长，魔芋块茎需专门加工；两者同科，不能把野生块茎当魔芋。" }
+  ,"mandragora-officinarum": { targetId: "tomato", diff: "曼德拉草浆果小、橙红，番茄果实大、多汁；曼德拉草全株含托烷生物碱，不能以“像小番茄”判断。" }
+  ,"myristica-fragrans": { targetId: "cinnamon", diff: "肉豆蔻是圆形种子、表面有网状纹理，肉桂是卷曲树皮、甜辛香；两者都是香料，但部位和毒性不同。" }
+  ,"pausinystalia-johimbe": { targetId: "cinnamon", diff: "育亨宾是茜草科苦味树皮，肉桂是樟科甜辛香树皮；育亨宾含育亨宾生物碱，不能当香料使用。" }
+  ,"artemisia-absinthium": { targetId: "mugwort", diff: "苦艾叶更银灰、味更苦，艾草是常见食用/药用蒿属；苦艾精油不可内服，不能与艾草混用。" }
+
 };

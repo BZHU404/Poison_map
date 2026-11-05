@@ -1,11 +1,11 @@
 /* 毒物谱 · 植物数据（第一批）
  * 全部条目仅用于创作与形态参考，不构成医疗建议。
  * 毒性、发作时间与分布均为概括性资料，个体差异极大。
- * 版本：4.0 · 69 条毒物（植物 29 / 蛇类 12 / 真菌 6 / 海洋 6 / 节肢 4 / 病原 12）
+ * 版本：5.0 · 75 条毒物（植物 33 / 蛇类 12 / 真菌 7 / 海洋 6 / 节肢 5 / 病原 12）
  */
 
 window.POISON_META = {
-  version: "4.0",
+  version: "5.0",
   updated: "2026-11",
   siteName: "毒物谱",
   siteEn: "Poisons & Pathogens",
@@ -84,13 +84,14 @@ window.POISON_PLANTS = [
     family: "茄科 Solanaceae",
     genus: "曼陀罗属 Datura",
     aliases: ["醉心花", "风茄儿", "狗核桃", "山茄子"],
+    topics: ["性幻觉", "催情传说", "春药"],
     toxicity: {
       level: 5,
       parts: "全株；种子与花尤其危险",
       symptoms: ["瞳孔散大", "幻觉", "心悸", "抽搐", "昏迷", "恶心呕吐"],
       onset: "误食后约 15 分钟–2 小时",
       lethal: "是",
-      note: "典型抗胆碱能样中毒：口干、畏光、皮肤潮红、躁动与幻觉可先于昏迷出现。"
+      note: "典型抗胆碱能样中毒：口干、畏光、皮肤潮红、躁动与幻觉可先于昏迷出现。谵妄中可能出现性相关幻觉或去抑制，但这不是同意，也不是可控的“春药”效果。"
     },
     medicinal: {
       used: true,
@@ -136,13 +137,14 @@ window.POISON_PLANTS = [
     family: "茄科 Solanaceae",
     genus: "颠茄属 Atropa",
     aliases: ["美女草", "致命夜影", "颠茄草"],
+    topics: ["性幻觉", "催情传说"],
     toxicity: {
       level: 5,
       parts: "全株；根、叶与黑色浆果尤其危险",
       symptoms: ["瞳孔散大", "幻觉", "心悸", "恶心呕吐", "抽搐", "昏迷"],
       onset: "误食后约 30 分钟–2 小时",
       lethal: "是",
-      note: "含托烷生物碱，抗胆碱能症状突出；瞳孔散大与谵妄常是叙事中最醒目的信号。"
+      note: "含托烷生物碱，抗胆碱能症状突出；瞳孔散大与谵妄常是叙事中最醒目的信号。性相关幻觉属于中毒性谵妄，不能构成同意。"
     },
     medicinal: {
       used: true,
@@ -448,13 +450,14 @@ window.POISON_PLANTS = [
     family: "茄科 Solanaceae",
     genus: "天仙子属 Hyoscyamus",
     aliases: ["莨菪", "莨菪子（药材名）", "黑莨菪"],
+    topics: ["性幻觉", "催情传说"],
     toxicity: {
       level: 5,
       parts: "全株；种子与叶尤其危险",
       symptoms: ["瞳孔散大", "幻觉", "心悸", "恶心呕吐", "抽搐", "昏迷"],
       onset: "误食后约 30 分钟–2 小时",
       lethal: "是",
-      note: "含东莨菪碱、阿托品等托烷生物碱；谵妄、畏光与心律失常可同时出现。"
+      note: "含东莨菪碱、阿托品等托烷生物碱；谵妄、畏光与心律失常可同时出现。被药物推向的亲密行为不是欲望或同意。"
     },
     medicinal: {
       used: true,
@@ -1583,5 +1586,217 @@ window.POISON_PLANTS = [
     misuse: "把红色果序当野果；把块茎当魔芋或芋头；徒手掰佛焰苞；用“泡姜汁”自行去毒。",
     trivia: "天南星属的佛焰苞与肉穗花序是天南星科的标志性结构；同一科里既有可食的芋头，也有必须专业处理的毒性植物。",
     silhouette: { leaf: "palmate", flower: "cup-spike", fruit: "berry" }
+  },
+  {
+    id: "mandragora-officinarum",
+    kind: "plant",
+    name: "曼德拉草",
+    en: "Mandrake",
+    latin: "Mandragora officinarum",
+    family: "茄科 Solanaceae",
+    genus: "曼德拉草属 Mandragora",
+    aliases: ["毒参茄", "曼德拉根", "Mandrake"],
+    topics: ["性幻觉", "催情传说", "春药"],
+    toxicity: {
+      level: 5,
+      parts: "根、叶与浆果；根常被民间当作“春药”或魔法材料",
+      symptoms: ["瞳孔散大", "幻觉", "心悸", "恶心呕吐", "抽搐", "昏迷"],
+      onset: "食入后约 30 分钟–2 小时；抗胆碱能谵妄可迅速加重（参考）",
+      lethal: "可能（根与果实均含托烷生物碱，可致谵妄、抽搐与昏迷）",
+      note: "曼德拉草的“性幻觉”来自抗胆碱能谵妄与去抑制，不是可靠的催情效果。谵妄中的言行不构成同意，也不能被写成可安全操控的春药。"
+    },
+    medicinal: {
+      used: true,
+      parts: "根（历史药用/民间药用部位）",
+      uses: "古代与中世纪欧洲用于镇痛、催眠与生育相关方术；现代仅在毒理与药理史中被讨论，不构成用药建议。",
+      contraindications: "全株大毒；儿童、孕妇、青光眼、前列腺疾病与心血管疾病患者尤其危险；禁止自行泡酒、煎服或外敷。"
+    },
+    habitat: "地中海沿岸的林地、灌丛、橄榄园与受扰动草地。",
+    habitatTypes: ["林地", "旷野", "栽培"],
+    routeTags: ["食入", "皮肤接触"],
+    distribution: "地中海地区至西亚；欧洲、北非与部分温带地区有栽培或归化记录。",
+    height: "0.1–0.5 米，叶呈莲座状",
+    bloom: "3–5 月",
+    morphology: {
+      leaf: "卵形至倒卵形，边缘波状，基生莲座状，叶面粗糙。",
+      flower: "钟状，淡紫至绿白色，单生于叶丛中。",
+      fruit: "球形浆果，成熟时橙黄至红色，像小番茄。",
+      flowerColor: "淡紫至绿白",
+      leafColor: "深绿",
+      stemColor: "短缩，常不明显"
+    },
+    colorTags: ["紫", "黄", "绿"],
+    palette: { flower: "#9B8DA8", leaf: "#4E6648", stem: "#756A4E", accent: "#9A5A45", fruit: "#C68A4D" },
+    smell: "根有刺鼻的土腥与药味；果实有甜味，但不能以气味判断安全。",
+    lookalikes: [
+      { name: "番茄 Solanum lycopersicum", diff: "番茄果实大、多汁、成熟红或黄，是常见蔬菜；曼德拉草果实小、橙红，整株含托烷生物碱。" },
+      { name: "曼陀罗 Datura stramonium", diff: "曼陀罗为一年生草本、花喇叭状、果实带刺；曼德拉草为低矮莲座状，浆果无刺，但两者都可能致谵妄。" }
+    ],
+    protection: "不要采挖根、摘果或揉汁；园艺操作戴手套；不要把曼德拉草当“魔法植物”带入卧室或给他人使用。",
+    firstAid: "立即联系急救或毒物中心。保留植物样本或照片；不要自行催吐、喂食或使用“解毒”偏方；谵妄者需有人陪伴以防伤害。",
+    legend: "曼德拉草的根常被想象成人形，欧洲民间传说说拔出时会发出致命尖叫。这个形象后来被文学、电影和“春药”传说反复利用，但它真实的药理核心是抗胆碱能毒性。",
+    creative: "适合写一座温室或古堡药圃：角色把曼德拉根当成“催情秘药”，真正发生的却是瞳孔散大、口干、幻觉与失控。把这场戏写成权力与误认，而不是浪漫的化学反应；被下药的人无法给出可靠同意。",
+    misuse: "把根泡酒或磨粉当春药；相信“人形根”有特殊魔力；用曼德拉草制造“迷情”场景；给不知情的人食用。",
+    trivia: "曼德拉草与曼陀罗、颠茄、天仙子同属托烷生物碱植物；它们的谵妄表现相似，但植物形态和毒性部位不同。",
+    silhouette: { leaf: "ovate", flower: "bell", fruit: "berry" }
+  },
+  {
+    id: "myristica-fragrans",
+    kind: "plant",
+    name: "肉豆蔻",
+    en: "Nutmeg",
+    latin: "Myristica fragrans",
+    family: "肉豆蔻科 Myristicaceae",
+    genus: "肉豆蔻属 Myristica",
+    aliases: ["肉果", "Nutmeg", "Mace"],
+    topics: ["催情传说", "春药", "香料"],
+    toxicity: {
+      level: 3,
+      parts: "种子（肉豆蔻）与挥发油；种皮（肉豆蔻衣）也含活性成分",
+      symptoms: ["幻觉", "恶心呕吐", "心悸", "抽搐", "昏迷"],
+      onset: "大量食入后约 2–6 小时；小剂量烹饪通常不产生谵妄（参考）",
+      lethal: "可能（大量、儿童或与精神活性药物同用时风险更高）",
+      note: "肉豆蔻是厨房香料，但大量粉末或浓缩油可致谵妄、心悸与抽搐。“催情”主要是民间传说，不能作为安全用法。"
+    },
+    medicinal: {
+      used: true,
+      parts: "种子（香料/传统药用部位）",
+      uses: "作为香料与传统消化用药；现代不推荐用大剂量肉豆蔻追求精神活性或催情效果。",
+      contraindications: "儿童、孕妇、癫痫与心血管疾病患者避免大剂量；不要使用肉豆蔻精油自行内服。"
+    },
+    habitat: "热带湿润低地雨林；主要在香料园栽培。",
+    habitatTypes: ["热带", "栽培"],
+    routeTags: ["食入"],
+    distribution: "原产印度尼西亚班达群岛；格林纳达、印度、斯里兰卡与东南亚广泛栽培。",
+    height: "5–15 米",
+    bloom: "热带花期不固定",
+    morphology: {
+      leaf: "椭圆至披针形，深绿，叶面有光泽。",
+      flower: "花小，淡黄，雌雄异株。",
+      fruit: "核果，成熟时橙黄，裂开露出红色假种皮与深色种子。",
+      flowerColor: "淡黄",
+      leafColor: "深绿",
+      stemColor: "灰褐"
+    },
+    colorTags: ["黄", "红", "绿"],
+    palette: { flower: "#D9C985", leaf: "#405C43", stem: "#7A624B", accent: "#A85A3D", fruit: "#C99A4F" },
+    smell: "种子有温暖、辛香的挥发油气味；肉豆蔻衣气味更细腻。",
+    lookalikes: [
+      { name: "肉桂 Cinnamomum verum", diff: "肉桂用树皮，卷曲成筒、香气甜辛；肉豆蔻是种子，圆形、表面有网状纹理，不能互相替代。" },
+      { name: "肉豆蔻衣 Mace", diff: "肉豆蔻衣是种子外的红色假种皮，气味较柔和；与种子不是同一部位，但都含类似芳香成分。" }
+    ],
+    protection: "把肉豆蔻当普通香料使用，不要大剂量吞服粉末或精油；儿童与宠物远离精油瓶；不要给他人秘密加入饮品。",
+    firstAid: "立即联系急救或毒物中心。保留包装或剩余粉末；不要自行催吐、喂食或混合酒精/其他药物。",
+    legend: "肉豆蔻在中世纪欧洲是昂贵的香料，也被用作“暖身”和催情传说。它的精神活性来自肉豆蔻醚等成分，但大剂量带来的更多是恶心、心悸与谵妄，而不是浪漫。",
+    creative: "适合写冬夜的厨房：一罐肉豆蔻粉被误当成“迷情香料”大量倒入热饮。角色先感到口干、心跳加快，随后看见不存在的影子。把“催情”写成传说与误读，而不是有效配方。",
+    misuse: "把肉豆蔻粉当致幻剂或春药大量吞服；用精油兑酒；把香料秘密加入他人饮品；给儿童尝试。",
+    trivia: "肉豆蔻与肉豆蔻衣来自同一种植物：前者是种子，后者是种子外的红色假种皮。",
+    silhouette: { leaf: "lanceolate", flower: "star", fruit: "drupe" }
+  },
+  {
+    id: "pausinystalia-johimbe",
+    kind: "plant",
+    name: "育亨宾",
+    en: "Yohimbe",
+    latin: "Pausinystalia johimbe",
+    family: "茜草科 Rubiaceae",
+    genus: "育亨宾属 Pausinystalia",
+    aliases: ["育亨宾树", "Yohimbe", "Johimbe"],
+    topics: ["催情传说", "春药"],
+    toxicity: {
+      level: 3,
+      parts: "树皮，含育亨宾等生物碱；提取物与“催情”补剂常见",
+      symptoms: ["心悸", "恶心呕吐", "抽搐", "昏迷", "呼吸困难"],
+      onset: "食入后约 30–60 分钟；心悸、焦虑与血压升高可较早出现（参考）",
+      lethal: "可能（心血管事件、过量或与药物相互作用时风险更高）",
+      note: "育亨宾是处方药成分，不是安全的天然春药。它可升高血压、诱发焦虑与心律失常；“催情”证据有限，不能抵消风险。"
+    },
+    medicinal: {
+      used: true,
+      parts: "树皮（育亨宾生物碱来源）",
+      uses: "育亨宾曾用于自主神经与勃起功能障碍的处方研究；必须在医生指导下使用，本页不提供剂量或制剂。",
+      contraindications: "高血压、心脏病、焦虑障碍、甲状腺疾病与正在服用抗抑郁药者尤其危险；不要与酒精或其他兴奋剂混用。"
+    },
+    habitat: "中西非热带雨林，常见于湿润低地森林。",
+    habitatTypes: ["林地", "热带"],
+    routeTags: ["食入"],
+    distribution: "喀麦隆、加蓬、刚果等地；因树皮贸易受到关注。",
+    height: "10–30 米",
+    bloom: "热带花期不固定",
+    morphology: {
+      leaf: "卵形至椭圆形，对生，深绿。",
+      flower: "圆锥花序，花小，黄白至淡红。",
+      fruit: "蒴果，细长，成熟时褐黄。",
+      flowerColor: "黄白至淡红",
+      leafColor: "深绿",
+      stemColor: "灰褐"
+    },
+    colorTags: ["黄", "绿"],
+    palette: { flower: "#D8C98D", leaf: "#3F5C41", stem: "#76604A", accent: "#A55D3D", fruit: "#8C744D" },
+    smell: "树皮有苦味与木质香气；提取物常被做成补剂或茶。",
+    lookalikes: [
+      { name: "肉桂 Cinnamomum verum", diff: "肉桂是月桂科树皮，卷曲成筒、甜辛香；育亨宾是茜草科树皮，味苦，含育亨宾生物碱。" },
+      { name: "咖啡 Coffea", diff: "咖啡因与育亨宾都能兴奋心血管，但化学结构和风险不同；不要把“植物来源”当成安全。" }
+    ],
+    protection: "不要购买或自行使用育亨宾树皮/补剂；不要把“天然催情”当作安全；服用处方药、心血管药或抗抑郁药时尤其避免。",
+    firstAid: "立即联系急救或毒物中心，说明是否服用育亨宾补剂或树皮。不要自行催吐或混合其他兴奋剂；胸痛、心悸或呼吸困难时立即就医。",
+    legend: "育亨宾在西非有传统使用，也被现代补剂工业包装成“男性催情树皮”。真正进入药理学视野的是育亨宾生物碱，而不是浪漫传说。",
+    creative: "适合写一间灯光过亮的成人用品店：货架上写着“天然催情”，瓶身没有剂量与禁忌。角色吞下后心跳失控、手掌出汗，幻觉把普通的亲密场景扭成威胁。把春药写成消费主义与身体风险，而不是能力增强。",
+    misuse: "把育亨宾补剂与酒精、咖啡或其他兴奋剂叠加；给不知情的人下药；相信“天然”没有副作用；用树皮泡茶。",
+    trivia: "育亨宾的生物碱曾被用于研究勃起功能，但“有效”与“可安全自行使用”是两件完全不同的事。",
+    silhouette: { leaf: "ovate", flower: "panicle", fruit: "capsule" }
+  },
+  {
+    id: "artemisia-absinthium",
+    kind: "plant",
+    name: "苦艾",
+    en: "Wormwood",
+    latin: "Artemisia absinthium",
+    family: "菊科 Asteraceae",
+    genus: "蒿属 Artemisia",
+    aliases: ["苦艾草", "Absinthe wormwood", "Wormwood"],
+    topics: ["催情传说", "苦艾酒"],
+    toxicity: {
+      level: 3,
+      parts: "叶与挥发油；苦艾酒中的苦艾提取物",
+      symptoms: ["幻觉", "抽搐", "恶心呕吐", "昏迷", "心悸"],
+      onset: "大量摄入后约 30 分钟–2 小时；苦艾酒的慢性风险与酒精和摄入量相关（参考）",
+      lethal: "可能（大量、精油或长期高剂量可致抽搐与神经损伤）",
+      note: "苦艾的“致幻”名声多来自 19 世纪苦艾酒文化，而非可靠的春药证据。侧柏酮可致抽搐，精油尤其危险。"
+    },
+    medicinal: {
+      used: true,
+      parts: "叶与地上部分（传统药用部位）",
+      uses: "传统用于消化与驱虫；现代不推荐自行使用精油或高剂量苦艾酒。",
+      contraindications: "癫痫、孕妇、肝肾疾病与儿童避免；不要内服苦艾精油。"
+    },
+    habitat: "温带路旁、荒地、石质山坡与栽培药草园。",
+    habitatTypes: ["旷野", "山地", "栽培"],
+    routeTags: ["食入", "皮肤接触"],
+    distribution: "欧洲、西亚与北非；北美等地有归化。",
+    height: "0.5–1.5 米",
+    bloom: "7–9 月",
+    morphology: {
+      leaf: "深裂或二回羽状分裂，表面银灰绿色，有苦味与香气。",
+      flower: "头状花序小，淡黄色，排列成圆锥状。",
+      fruit: "瘦果，小，藏在花托内。",
+      flowerColor: "淡黄",
+      leafColor: "银灰绿",
+      stemColor: "灰绿至淡紫"
+    },
+    colorTags: ["绿", "黄"],
+    palette: { flower: "#D1C27D", leaf: "#7A8968", stem: "#8A8667", accent: "#8A5A45", fruit: "#8B7C5A" },
+    smell: "强烈苦味与药草香；揉叶后气味更浓。",
+    lookalikes: [
+      { name: "艾草 Artemisia vulgaris", diff: "艾草叶形与苦艾相近，但苦艾叶更银灰、味更苦；艾草是常见食用/药用植物，苦艾精油不可内服。" },
+      { name: "茴香 Foeniculum vulgare", diff: "茴香叶为细羽状、有甜辛香；苦艾叶深裂、银灰绿，气味苦。" }
+    ],
+    protection: "不要自行提取或内服苦艾精油；苦艾酒也应避免大量饮用；儿童与宠物远离精油。",
+    firstAid: "立即联系急救或毒物中心。保留酒瓶、精油瓶或植物样本；不要自行催吐或喂食。",
+    legend: "“苦艾酒致幻”是 19 世纪巴黎的都市传说，甚至被归咎为“绿色仙子”。现代毒理更关注酒精、侧柏酮含量与过量，而不是浪漫的春药神话。",
+    creative: "适合写世纪末酒馆：苦艾酒在灯下泛绿，客人谈论“绿色仙子”和“催情”。角色喝到抽搐时，真正需要被写出的是酒精、剂量与失控，而不是一场被美化的艳遇。",
+    misuse: "把苦艾酒当春药或致幻剂大量饮用；内服苦艾精油；用苦艾替换普通香草；给不知情者加料。",
+    trivia: "苦艾的苦味来自苦艾素等成分；它和茴香、茴芹一起构成传统苦艾酒的风味基底。",
+    silhouette: { leaf: "compound", flower: "panicle", fruit: "capsule" }
   }
 ];
